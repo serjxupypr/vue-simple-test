@@ -24,11 +24,6 @@ const menulinks = [
     urlName: 'stories',
     id: 2,
   },
-  {
-    url: '/about',
-    urlName: 'about',
-    id: 3,
-  },
 ]
 
 export default {

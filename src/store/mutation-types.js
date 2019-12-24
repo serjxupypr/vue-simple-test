@@ -1,1 +1,2 @@
 export const GET_STORIES = 'GET_STORIES';
+export const GET_SINGLE_STORY = 'GET_SINGLE_STORY';

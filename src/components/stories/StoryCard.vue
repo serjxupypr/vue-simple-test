@@ -10,9 +10,13 @@
       </h3>
     </a> -->
 
-    <a href="#" class="story-link">
+    <!-- <a href="#" class="story-link">
       <h3 class="story-title">{{storyCardInfo.title}}</h3>
-    </a>
+    </a> -->
+
+    <router-link class="story-link" :to="{'name': 'stories.show', params: {id: storyCardInfo.id}}">
+      <h3 class="story-title">{{storyCardInfo.title}}</h3>
+    </router-link>
   </div>
 </template>
 

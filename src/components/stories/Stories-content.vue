@@ -22,13 +22,15 @@ export default {
 
   data: function() {
     return {
-      stories: this.$store.state.stories,
-      loaded: this.$store.state.stories.length === 0 ? false : true,
+      stories: [],
+      loaded: false,
     }
   },
 
-  mounted: function() {
-    this.$store.dispatch('get_all_stories');
+  mounted: async function() {
+    await this.$store.dispatch('get_all_stories');
+    this.stories = this.$store.state.stories;
+    this.loaded = !!this.$store.state.stories.length;
   }
 }
 </script>
